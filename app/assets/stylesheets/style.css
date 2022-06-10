@@ -1,0 +1,53 @@
+.main{
+  display: flex;
+  justify-content: center;
+}
+.main_screen{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(115, 120, 105);
+  height: 60vh;
+  width: 70vw;
+  border-color: darkgray;
+  border:7px solid;
+  border-radius: 30px;
+  position: absolute;
+}
+.people img{
+  position: relative;
+  height: 400px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.main_button{
+  padding-top: 365px;
+  padding-left: 1290px;
+  padding-bottom: 10px;
+}
+.textbox{
+  height: 260px;
+  width: 1400px;
+  background-color: white;
+  border-radius: 30px;
+  border:7px solid;
+  border-color: darkgray;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 80px;
+}
+.text {
+  font-size: 40px;
+  padding-top: 15px;
+  margin-left: 10px;
+  position: relative;
+}
+.button_size{
+  font-size: 30px;
+  width: 200px;
+  height: 100px;
+  border-radius: 20px;
+}

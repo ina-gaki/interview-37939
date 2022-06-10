@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>面接練習</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="main_screen">
+       <div class="people">
+       <%= image_tag asset_path("president.png", alt: "面接官") %>
+       </div>
+
+      </div>
+    </div>
+    
+    <div class="main_button">
+      <button onclick="speak()" , class="button_size">話す</button>
+    </div>
+ 
+    <div class="textbox">
+      <div id="text", class="text"></div>
+    </div>
+
+      <script>
+        let array = ["自己紹介をお願いします。","何故今回転職をお考えになられたのですか。","何故エンジニアを目指そうと思われたのですか。"
+      ,"弊社を志望する理由について教えてください。","弊社についてご存知のことを教えてください。","弊社のwebサイトをご覧になっての感想をお聞かせ下さい。"
+      ,"もし弊社で採用となった場合、弊社でどのような仕事をしてみたいとお考えですか。","前職の会社にはどういった理由で入社されたのでしょうか。",
+      "前職では主にどのような業務を担われていたのでしょうか。","前職で成果を上げたことを一つ挙げるとしたら、どういったお仕事でしたか。"
+      ,"テックキャンプではどのような学習をされているのでしょうか。","将来はどのようなエンジニアになりたいとお考えでしょうか。"
+      ,"プログラミングやエンジニアのことで、テックキャンプの学習以外で自分自身で学ばれていることはありますか。","あなたの強みを教えてください。"
+      ,"あなたの弱みを教えてください。","あなたにとっての「成功体験」を一つ挙げるとしたら、どのような体験ですか。","あなたにとっての「失敗体験」を一つ挙げるとしたら、どのような体験ですか。"
+      ,"これまで最も困難と感じたことは何ですか。","周りの人から、あなたはどのような人だと言われることが多いですか。","周りの人との関わりの中で、あなたはどのような役割を担うことが多いですか。"
+      ,"私どもに何か質問はありますか。"
+        ]
+        
+        function speak(){
+          let text = array[Math.floor(Math.random()*array.length)]
+          document.querySelector('#text').innerHTML = text
+          let uttr = new SpeechSynthesisUtterance(text);
+          speechSynthesis.speak(uttr);
+        }
+      </script>
+  </body>
+</html>
